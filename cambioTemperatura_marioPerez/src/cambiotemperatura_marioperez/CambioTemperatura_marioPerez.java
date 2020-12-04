@@ -18,13 +18,18 @@ public class CambioTemperatura_marioPerez {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Scanner teclado=new Scanner (System.in);
-        System.out.println("Introduzca una temperatura en grados centigrados: ");
-        double grados=teclado.nextDouble();
-        
-        double kelvin=grados+273;
-        
-        
+        Scanner teclado = new Scanner(System.in);
+        char respuesta = 'S';
+        do {
+            System.out.println("Introduzca una temperatura en grados centigrados: ");
+            double grados = teclado.nextDouble();
+
+            double kelvin = grados + 273;
+
+            System.out.println("Quiere introducir mas temperaturas? (S/N)");
+            respuesta = teclado.next().charAt(0);
+
+        } while (respuesta == 'S');
     }
-    
+
 }
